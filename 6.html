@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="6.css">
+    <link rel="stylesheet" href="navFoot.css">
+    <link rel="stylesheet" href="navFoot.responsive.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="6.js"></script>
+    <title>Stock</title>
+</head>
+<body>
+<!-------------------------------------------------------Navbar--------------------------------------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+  <div class="container-fluid">
+    <i class="bi bi-circle-fill" id="circle"></i>
+    <a class="navbar-brand" id="logo" href="#">StockEasy</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="5.html">Profile</a>
+        <a class="nav-link active" href="6.html" style="color: #f96540; font-weight: 700">Stock</a>
+        <a class="nav-link" href="12.html">Customer</a>
+        <a class="nav-link" href="13.html">Payment</a>
+        <a class="nav-link" href="14.html">Reports</a>
+        <a class="nav-link" href="15.html">Sales</a>
+        <a class="nav-link" href="1.html">Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-------------------------------------------------------Leftscreen--------------------------------------------------------------------->
+    <div class="container-fluid">
+      <main>
+        <div class="row justify-content-center" id="responsive">
+            <div class="col-md-6 justify-content-start">
+              <div id="mainscreenheaderbuttonholder">
+                <button onclick="showdiv()" type="button" class="btn btn-secondary" id="mainscreenheaderbuttonadd">Add Record<i class="bi bi-plus-circle" id="headerbuttonicon"></i></button>
+                <button onclick="onrecord()" type="button" class="btn btn-secondary" id="mainscreenheaderbuttonadd">View Record<i class="bi bi-eye-fill" id="headerbuttonicon"></i></button>
+                <button onclick="showsell()" type="button" class="btn btn-secondary" id="mainscreenheaderbuttonadd">Sell<i class="bi bi-cart" id="headerbuttonicon"></i></button> 
+              </div>
+                <!-----------------------For Addrecord-------------------------->
+                <div id="formcontainer">
+                    <div class="formwrapper">
+                        <form >
+                            <div class="row tt">
+                              <div class="col" >
+                                <input type="number" class="form-control"  placeholder="Batch No."  >
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Med name">
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control"  placeholder="Manf. name">
+                              </div>
+                            </div>
+                            <div class="row tt">
+                                <div class="col">
+                                  <input type="number" class="form-control" placeholder="Manf Date">
+                                </div>
+                                <div class="col">
+                                  <input type="number" class="form-control" placeholder="Exp. Date">
+                                </div>
+                              </div>
+                              <div class="row tt">
+                                <div class="col">
+                                  <input type="text" class="form-control"  placeholder="Buying Cost">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="MRP">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control"  placeholder="Discount Cost">
+                                </div>
+                              </div>
+                              <div class="row tt">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Consumer cost">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Prescription Needed">
+                                </div>
+                              </div>
+                              <div class="row tt">
+                                <div class="col">
+                                  <input type="text" class="form-control"  placeholder="Seller Id">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Seller Name">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control"  placeholder="Category">
+                                </div>
+                              </div>
+                              <div class="row tt">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Client Id">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Date of Entry">
+                                </div>
+                              </div>
+                              <div class="row tt">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Date of Dispatch">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Qty">
+                                </div>
+                              </div>
+                              <div class="row tt">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Type of Medicine">
+                                </div>
+                              </div>
+                            
+                            </form>
+                            <div onclick="save()" id="savebutton">
+                                <button type="button" class="btn btn-secondary" id="savebutton">Save</button>   
+                            </div>
+                            
+                    </div>
+                </div>
+<!------------------For view record--------------------->
+                <div id="outer-wrapper" >
+                  <div class="table-wrapper">
+                    <table>
+              <thead>
+                <th>Batch No.</th>
+                <th>Med Name</th>
+                <th>Manf Name</th>
+                <th>Manf. Date</th>
+                <th>Exp Date</th>
+                <th>Buying Cost</th>
+                <th>MRP</th>
+                <th>Discount Cost</th>
+                <th>Customer Cost</th>
+                <th>Prescription Needed</th>
+                <th>Seller Id</th>
+                <th>Seller Name</th>
+                <th>Category</th>
+                <th>Client Id</th>
+                <th>Date of Entry</th>
+                <th>date of Dispatch</th>
+                <th>QTY</th>
+                <th>Type of Medicine</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                    <td>Value 6</td>
+                    <td>Value 7</td>
+                    <td>Value 8</td>
+                    <td>Value 9</td>
+                    <td>Value 10</td>
+                    <td>Value 11</td>
+                    <td>Value 12</td>
+                    <td>Value 13</td>
+                    <td>Value 14</td>
+                    <td>Value 15</td>
+                    <td>Value 16</td>
+                    <td>Value 17</td>
+                    <td>Value 18</td>
+                </tr>
+    
+            </tbody>
+                    </table>
+                  </div>
+                </div>          
+<!------------For sell form------------->
+                <div id="formcontainersell">
+                    <div class="formcontainerwrapper" id="tt">
+                        <form >
+                            <div class="mb-3" >  
+                                <input type="email" class="form-control" id="exampleInputName" placeholder="Medicine Name"> 
+                              </div>
+                              <div class="mb-3">  
+                                <input type="email" class="form-control" id="exampleInputMedManf" placeholder="Medicine Manf"> 
+                              </div>
+                              <div class="mb-3">  
+                                <input type="email" class="form-control" id="exampleInputSName" placeholder="Seller Name"> 
+                              </div>
+                              <div class="mb-3">  
+                                <input type="email" class="form-control" id="exampleInputTypeofMed" placeholder="Type of Medicine"> 
+                              </div>
+                              <div class="mb-3">  
+                                <input type="email" class="form-control" id="exampleInputQty" placeholder="QTY"> 
+                              </div>
+                        </form>
+                    </div>
+                    <div id="gobutton">
+                      <button onclick="go()" type="button" class="btn btn-secondary" id="mainscreenheaderbuttonadd">Go</button>   
+                    </div>
+                </div>
+<!------------For 2nd sell form------------->
+                <div id="tablecontainer">
+    <div class="tablewrapper">
+        <table class="table">
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+            <tr>
+                <td class="tdata">Medicine Name</td>
+                <td class="tdata">Medicine Man</td>
+                <td class="tdata">Qty</td>
+                <td class="tdata">Price</td>
+            </tr>
+        </table>
+    </div>
+    
+                </div>
+                <div id="custform">
+                          <input type="text" class="form-control" id="custformN"  placeholder="Customer Name">
+                          <input type="number" class="form-control" id="custformM" min="0" max="10" placeholder="Mobile No">
+                          <input type="email" class="form-control" id="custformE"  placeholder="Email Id">
+                          <input type="email" class="form-control" id="custformN"  placeholder="Total Price to Pay">
+                          <input type="number" class="form-control" id="custformN"  placeholder="Amount">
+                </div>
+                <div id="formbutton">
+                    <button type="button" onclick="hidesell()" class="btn btn-secondary" id="formbuttons">Cancel</button>   
+                    <button type="button" class="btn btn-secondary" id="formbuttons">Confirm</button>   
+                </div>
+            </div>           
+<!-------------------------------------------------------Rightscreen--------------------------------------------------------------------->
+            <div class="col-md-5 text-center" id="rightscreen">
+              <div id="right-element">
+                <h2>StockEasy</h2>
+                <p>Now it is very easy to maintain stock.</p>
+                <p>Save your time and enjoy the day.</p>
+                <div id="backgroundscreen">
+                  <img src="cover.jpeg" alt="">
+                </div>
+              </div>
+            </div>
+        </div>
+      </main>
+<!-------------------------------------------------------Footer--------------------------------------------------------------------->
+            <div class="row" id="footer">
+              <div class="col-md-4 text-center">
+                  <div id="navitems">
+                    <span><a href="#"></a></span>
+                  </div>
+              </div>
+              <div class="col-md-4 text-center" id="copy">
+                  <span><a>&copy; Copyright - StockEasy </a></span>
+              </div>
+              <div class="col-md-4 text-center" id="icons">
+                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-google"></i>
+                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+       
+<!------fluidend------------->
+</div>
+</body>
+</html>

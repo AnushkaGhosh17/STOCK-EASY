@@ -1,0 +1,77 @@
+/*-------------------Mainscreen--------------------------*/
+#mainscreen img {
+  max-width: 100%;
+  margin-top: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#mainscreen{
+  padding-top: 60px;
+}
+element.style {
+  margin-bottom: 2%;
+}
+#leftscreen {
+  padding-top: 100px;
+}
+#signinbutton{
+  background-color: rgb(249, 168, 37);
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: none;
+}
+#signinbutton:focus{
+  background-color: #f96540;
+  box-shadow: none;
+}
+.reset a{
+  color: black;
+  text-decoration: none;
+}
+.reset a:hover{
+  color: #f96540;
+  text-decoration: underline;
+}
+/*--------------------Responsive--------------------*/
+@media only screen and (min-width: 360px) and (max-width: 540px) {
+  #responsive {
+    flex-direction: column-reverse;
+  }
+  .heading {
+    text-align: center;
+  }
+  .heading h1 {
+    padding-bottom: 15px;
+  }
+  .heading p {
+    padding-bottom: 2 5px;
+  }
+  #leftscreen {
+    padding-top: 40px;
+  }
+  #signinbutton {
+    width: 100%;
+  }
+  .row .col-md-8 input {
+    margin-bottom: 25px;
+  }
+  .reset {
+    text-align: center;
+    font-size: 15px;
+  }
+  a {
+    color: black;
+  }
+  a:hover {
+    color: #f96540;
+    font-weight: 500;
+  }
+}
+@media only screen and (min-width: 765px) and (max-width: 915px){
+  #leftscreen{
+    padding-top: 180px;
+  }
+  #mainscreen{
+    padding-top: 210px;
+  }
+}

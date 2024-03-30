@@ -1,0 +1,60 @@
+/*-------------------Mainscreen--------------------------*/
+#mainscreen img {
+  max-width: 100%;
+  margin-top: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+input[type="email"] {
+  margin-bottom: 2%;
+}
+#leftscreen {
+  padding-top: 100px;
+}
+#mainscreen{
+  padding-top: 60px;
+}
+#links{
+  margin-top: 2%;
+}
+#links a{
+  text-decoration: none;
+  color: black;
+}
+#links a:hover{
+  color: #fa8466 !important;
+  border-bottom: 2px solid #fa8466;
+  font-size: 17px;
+  cursor: pointer;
+}
+#signinbutton:focus{
+  background-color: #f96540;
+  box-shadow: none;
+}
+#signinbutton{
+  background-color: rgb(249, 168, 37);
+  margin-top: 2%;
+  border: none;
+}
+/*-------------------Responsive--------------------------*/
+@media only screen and (min-width: 275px) and (max-width: 420px) {
+  #leftscreen{
+    padding-top: 50px;
+  }
+  #responsive{
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 540px) {
+  #responsive{
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 912px) {
+  #leftscreen {
+    padding-top: 150px;
+  }
+  #mainscreen{
+    padding-top: 150px;
+  }
+}

@@ -1,0 +1,53 @@
+/*-------------------Navbar--------------------------*/
+#navbar {
+    background-color: white;
+}
+#circle {
+    color: #f96540;
+    margin-left: 4%;
+    font-size: 30px;
+}
+#logo {
+  margin-left: 1%;
+  font-weight: 700;
+}
+/*-------------------Mainscreen--------------------------*/
+#mainscreen img {
+  max-width: 100%;
+  margin-top: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#mainscreenbutton {
+  background-color: rgb(249, 168, 37);
+  border: none;
+}
+#mainscreenbutton:focus {
+  background-color: #f96540;
+  box-shadow: none;
+}
+/*-------------------Responsive--------------------------*/
+@media only screen and (min-width: 350px) and (max-width: 560px){
+    #logo {
+      margin-left: 4%;
+    }
+    #mainscreen{
+      padding-top: 30%;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 825px){
+    #logo {
+      margin-left: 4%;
+    }
+    #mainscreen{
+      padding-top: 20%;
+    }
+}
+@media only screen and (min-width: 910px) and (max-width: 1028px){
+    #logo {
+      margin-left: 4%;
+    }
+    #mainscreen{
+      padding-top: 10%;
+    }
+}

@@ -1,0 +1,96 @@
+/*-------------------Leftscreenheaderbutton--------------------------*/
+#reportscreenheaderbutton{
+    margin-left: 1%;
+    margin-top: 1%;
+    background-color: rgb(249, 168, 37);
+    border: none;
+}
+#reportscreenheaderbuttonholder{
+    padding-left: 4%;
+}
+#reportscreenheaderbutton:active{
+    background-color:rgb(249, 101, 64);
+}
+/*-------------------Leftscreengraph1--------------------------*/
+#leftgraphscreen{
+    padding-top: 8%;
+}
+/*-------------------Rightscreegraph--------------------------*/
+#rightgraphscreen{
+    padding-top: 8%;
+}
+/*-------------------Responsive--------------------------*/
+@media only screen and (min-width: 350px) and (max-width: 420px){
+    #responsive{
+        flex-direction: column-reverse;
+    }
+    #reportscreenheaderbuttonholder{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #reportscreenheaderbutton{
+        width: 150px;
+        margin: 8px 8px;
+    }
+}
+@media only screen and (min-width: 421px) and (max-width: 560px){
+    #responsive{
+        flex-direction: column-reverse;
+    }
+    #reportscreenheaderbuttonholder{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #reportscreenheaderbutton{
+        width: 150px;
+        margin: 8px 8px;
+    }
+}
+@media only screen and (min-width: 765px) and (max-width: 825px){
+    #reportscreenheaderbuttonholder{
+        width: 74vw;
+    }
+    #reportscreenheaderbutton{
+        margin: 0;
+        font-size: 12px;
+    }
+    #responsive{
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    }
+}
+@media only screen and (min-width: 890px) and (max-width: 915px){
+    #reportscreenheaderbuttonholder{
+        width: 74vw;
+    }
+    #reportscreenheaderbutton{
+        margin: 0;
+        font-size: 15px;
+    }
+    #responsive{
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+}
+@media only screen and (min-width: 1020px) and (max-width: 1284px){
+    #reportscreenheaderbuttonholder{
+        width: 74vw;
+    }
+    #reportscreenheaderbutton{
+        margin: 0;
+        font-size: 18px;
+    }
+    #responsive{
+        padding-top: 5%;
+    }
+}

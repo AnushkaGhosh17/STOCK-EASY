@@ -1,0 +1,111 @@
+/*-------------------Mainscreen--------------------------*/
+#backgroundscreen img{
+  max-width: 100%;
+  margin-top: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#mainscreen p{
+  margin-bottom: 0;
+}
+#rightscreen p{
+  margin-bottom: 0;
+}
+#threeformpart{
+  padding-top: 75px;
+}
+#formpart {
+  padding-top: 40px;
+}
+#rightscreen{
+  padding-top: 60px;
+}
+#mainscreen {
+  padding-top: 60px;
+}
+#mainscreenbutton {
+  margin: 30px 5px;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(249, 168, 37);
+  border: none;
+}
+#mainscreenbutton:focus{
+  background-color: #f96540;
+  box-shadow: none;
+}
+span a:hover{
+  color: #fa8466 !important;
+  border-bottom: 2px solid #fa8466;
+  font-size: 17px;
+  cursor: pointer;
+}
+#tt{
+  text-align: left;
+  padding: 4px 4px;
+}
+/*-------------------Responsive--------------------------*/
+@media only screen and (min-width: 355px) and (max-width: 550px) {
+  .row {
+    max-width: 100%;
+  }
+  #formpart {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  #responsive {
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    padding-left: 15px;
+    flex-direction: column-reverse;
+  }
+  .form-control {
+    max-width: 110%;
+  }
+  #threeformpart {
+    padding-top: 10px;
+  }
+  #mainscreen {
+    padding-top: 20px;
+  }
+  #tt {
+    padding: 5px;
+  }
+  #tt .col {
+    padding: 0;
+  }
+  #mainscreen img {
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 825px){
+  #threeformpart{
+    padding-top: 15%;
+  }
+  #formpart{
+    padding-top: 15%;
+  }
+  #mainscreen {
+    padding-top: 20%;
+  }
+  #rightscreen{
+    padding-top: 20%;
+  }
+}
+@media only screen and (min-width: 850px) and (max-width: 915px){
+  #threeformpart{
+    padding-top: 25%;
+  }
+  #formpart{
+    padding-top: 25%;
+  }
+  #mainscreen {
+    padding-top: 30%;
+  }
+  #rightscreen{
+    padding-top: 30%;
+  }
+}

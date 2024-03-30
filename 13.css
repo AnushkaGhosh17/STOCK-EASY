@@ -1,0 +1,203 @@
+/*----------------------------------Mainscreen----------------------------------*/
+.container{
+    margin-top: 5%;
+}
+#shorter{
+    height: 70px;
+    width: 200px;
+    background-color: rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    margin-top: 50px;
+    border-top-left-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+#shorter h4{
+    opacity: 0.7;
+}
+#taller1{
+    height: 120px;
+    width: 200px;
+    border: 1px solid rgb(208, 208, 208);
+    border-top-left-radius: 5px;
+}
+#taller1in1{
+    height: 120px;
+    width: 200px;
+    border: 1px solid rgb(208, 208, 208);
+    border-top-right-radius: 5px;
+}
+#tallersep{
+    height: 120px;
+    width: 200px;
+    margin-left: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 2px solid rgb(241, 101, 64);
+    border-left: 2px solid rgb(241, 101, 64);
+    border-right: 2px solid rgb(241, 101, 64);
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+#shorter2{
+    height: 210px;
+    width: 200px;
+    background-color: rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+#tallersep2{
+    height: 210px;
+    width: 200px;
+    margin-left: 20px;
+    border-left: 2px solid rgb(241, 101, 64);
+    border-right: 2px solid rgb(241, 101, 64);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    display: flex;
+    align-items: center;
+}
+#taller2{
+    height: 210px;
+    width: 200px;
+    border: 1px solid rgb(208, 208, 208);
+}
+#child{
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgb(208, 208, 208);
+    display: flex;
+    align-items: center;
+}
+#childshorter2{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    display: flex;
+    align-items: center;
+}
+#shorter3{
+    height: 60px;
+    width: 200px;
+    background-color: rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    display: flex;
+    align-items: center;
+}
+#taller3{
+    height: 60px;
+    width: 400px;
+    border: 1px solid rgb(208, 208, 208);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tallersep3{
+    height: 60px;
+    width: 200px;
+    margin-left: 20px;
+    border-left: 2px solid rgb(241, 101, 64);
+    border-right: 2px solid rgb(241, 101, 64);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Callnow{
+    width: fit-content;
+    background-color: rgb(241, 101, 64);
+    border: none;
+}
+#shorter4{
+    height: 40px;
+    width: 200px;
+    background-color: rgb(245, 245, 245);
+    border-bottom-left-radius: 5px;
+}
+#taller41{
+    height: 70px;
+    width: 200px;
+    border: 1px solid rgb(208, 208, 208);
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#taller4in1{
+    height: 70px;
+    width: 200px;
+    border: 1px solid rgb(208, 208, 208);
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#planbutton{
+    width: 250px;
+    background-color: rgb(241, 101, 64);
+    border: none;
+}
+#tallersep4{
+    height: 70px;
+    width: 200px;
+    margin-left: 20px;
+    border-left: 2px solid rgb(241, 101, 64);
+    border-right: 2px solid rgb(241, 101, 64);
+    border-bottom: 2px solid rgb(241, 101, 64);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(241, 101, 64);
+}
+#subcard{
+    display: none;
+}
+/*-------------------Responsive--------------------------*/
+@media only screen and (min-width: 1000px) and (max-width: 1290px){
+    #subcard{
+        display: none;
+    }
+
+}
+@media only screen and (min-width: 750px) and (max-width: 915px){
+    .container{
+        display: none;
+    }
+    #subcard{
+        display: block;
+        padding-top: 200px;
+    }
+    .card{
+        height: 350px;
+    }
+    .currentplan{
+        margin-top: 35%;
+    }
+    .currentplanlast{
+        margin-top: 18%;
+    }
+
+
+}
+@media only screen and (min-width: 421px) and (max-width: 560px){
+    .container{
+        display: none;
+    }
+    .card{
+        margin-bottom: 5%;
+    }
+    #subcard{
+        display: block;
+    }
+}
+@media only screen and (min-width: 350px) and (max-width: 420px){
+    .container{
+        display: none;
+    }
+    .card{
+        margin-bottom: 5%;
+    }
+    #subcard{
+    display: block;
+    }
+}

@@ -1,0 +1,101 @@
+  /*-------------------LeftMainscreen--------------------------*/
+  #leftscreen{
+    padding-top: 120px;
+  }
+  .field{
+    margin-bottom: 2%;
+  }
+  #mainscreen{
+    padding-top: 60px;
+  }
+  .message{
+    resize: none;
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
+    border-color: #ced4da;
+    padding-left: 12px;
+  }
+  .message::placeholder{
+    padding-top: 8%;
+  }
+  #mainscreenbutton {
+    background-color: rgb(249, 168, 37);
+    border: none;
+  }
+  #submit{
+    background-color: rgb(249, 168, 37);
+    margin-top: 2%;
+    border: none;
+  }
+  #submit:focus{
+  background-color: rgb(249, 101, 64);
+  box-shadow: none;
+  }
+   /*-------------------RightMainscreen--------------------------*/
+  #mainscreen img {
+    max-width: 100%;
+    margin-top: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+ /*-------------------Responsive--------------------------*/
+ @media only screen and (min-width: 350px) and (max-width: 420px){
+  #leftscreen{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+  }
+  #leftscreen h1{
+    align-self: center;
+  }
+  #leftscreen p{
+    align-self: center;
+  }
+  #responsive{
+    flex-direction: column-reverse;
+  }
+  #mainscreen{
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 560px){
+  #leftscreen{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+  }
+  #leftscreen h1{
+    align-self: center;
+  }
+  #leftscreen p{
+    align-self: center;
+  }
+  #responsive{
+    flex-direction: column-reverse;
+  }
+  #mainscreen{
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-width: 765px) and (max-width: 825px){
+  .col-md-8{
+  width: 90%; 
+  }
+  #mainscreen{
+    padding-top: 120px;
+  }
+}
+@media only screen and (min-width: 850px) and (max-width: 915px){
+  .col-md-8{
+   width: 90%; 
+  }
+  #mainscreen{
+    padding-top: 120px;
+  }
+  }
+@media only screen and (min-width: 920px) and (max-width: 1026px){
+  #mainscreen{
+    padding-top: 120px;
+  }
+  }

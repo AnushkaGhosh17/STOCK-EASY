@@ -1,0 +1,63 @@
+@media only screen and (min-width: 275px) and (max-width: 420px) {
+  #logo {
+    margin-right: 35%;
+    margin-left: -6%;
+  }
+  #footer {
+    padding: 0;
+    margin: 0;
+  }
+  #footer .copywright {
+    text-align: center !important;
+  }
+  #footer .socials {
+    text-align: center !important;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 540px) {
+  #logo {
+    margin-left: -5%;
+    margin-right: 52%;
+  }
+  #footer {
+    padding: 0;
+    margin: 0;
+  }
+  #footer .copywright {
+    text-align: center !important;
+  }
+  #footer .socials {
+    text-align: center !important;
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 912px) {
+  #logo {
+    margin: -3%;
+    margin-right: 68%;
+  }
+}
+@media only screen and (min-width: 1021px) and (max-width: 1030px) {
+  #logo {
+    margin-left: 1%;
+    margin-right: 27%;
+  }
+  #navbarNavAltMarkup .navbar-nav .nav-link {
+    margin-left: 0px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0px 12px;
+  }
+}
+@media only screen and (min-width: 1270px) and (max-width: 1290px) {
+  #logo {
+    margin-left: 2%;
+    margin-right: 28%;
+  }
+  #navbarNavAltMarkup .navbar-nav .nav-link {
+    margin-left: 0px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0px 20px;
+  }
+}
+

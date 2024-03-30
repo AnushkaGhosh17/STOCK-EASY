@@ -1,0 +1,41 @@
+main{
+    min-height: 80vh;
+    margin-bottom: 2%;
+}
+#footer{
+    position: sticky;
+    top: 100%;
+    margin-bottom: 2%;
+    opacity: 0.8;
+}
+#navitems a{
+    text-decoration: none;
+    color: black;
+}
+#navitems a:hover{
+    text-decoration: underline;
+    color: #f96540;
+    font-size: 17px;
+}
+#icons i{
+    padding: 0px 10px;
+}
+i:hover{
+    color: #f96540;
+    font-size: 17px; 
+}
+/*-------------------Responsive--------------------------*/
+@media only screen and (min-width: 275px) and (max-width: 542px) {
+    #footer{
+        display: grid;
+        margin-top: 10%;
+    }
+    #copy{
+        order: 1;
+    }
+}
+@media only screen and (min-width: 550px) and (max-width: 912px) {
+    #footer{
+        margin-top: 15%;
+    }
+}

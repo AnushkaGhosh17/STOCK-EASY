@@ -1,0 +1,119 @@
+/*-------------------Navbar--------------------------*/
+#navbar {
+    background-color: white;
+  }
+  #circle {
+    color: #f96540;
+    margin-left: 4%;
+    font-size: 30px;
+  }
+  #logo {
+    margin-left: 1%;
+    font-weight: 700;
+  }
+/*-------------------Mainscreen--------------------------*/
+#leftscreen{
+  padding-top: 120px;
+}
+#mainscreen{
+  padding-top: 60px;
+}
+#mainscreen img {
+  max-width: 100%;
+  margin-top: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+input[type="email"]{
+  margin-bottom: 2%;
+}
+#signinbutton:focus{
+  background-color: #f96540;
+  box-shadow: none;
+}
+#signinbutton{
+  background-color: rgb(249, 168, 37);
+  margin-top: 2%;
+  border: none;
+}
+  /*-------------------Responsive--------------------------*/
+  @media only screen and (min-width: 350px) and (max-width: 420px){
+    #logo {
+      margin-right: 40%;
+      margin-left: 4%;
+    }
+    #navbar{
+      margin-top: 2%;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+      margin-top: 5%;
+    }
+    #leftscreen{
+      display: flex;
+      flex-direction: column;
+      padding-top: 10%;
+    }
+    #leftscreen h1{
+      align-self: center;
+    }
+    #leftscreen p{
+      align-self: center;
+    }
+    #responsive{
+      flex-direction: column-reverse;
+    }
+    #mainscreen{
+      padding-top: 10%;
+    }
+  }
+  @media only screen and (min-width: 421px) and (max-width: 560px){
+    #logo {
+      margin-right: 40%;
+      margin-left: 4%;
+    }
+    #navbar{
+      margin-top: 2%;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+      margin-top: 5%;
+    }
+    #leftscreen{
+      display: flex;
+      flex-direction: column;
+      padding-top: 10%;
+    }
+    #leftscreen h1{
+      align-self: center;
+    }
+    #leftscreen p{
+      align-self: center;
+    }
+    #responsive{
+      flex-direction: column-reverse;
+    }
+    #mainscreen{
+      padding-top: 10%;
+    }
+  }
+  @media only screen and (min-width: 765px) and (max-width: 825px){
+  .col-md-8{
+   width: 80%; 
+  }
+  #leftscreen{
+    padding-top: 150px;
+  }
+  #mainscreen{
+    padding-top: 150px;
+  }
+}
+@media only screen and (min-width: 850px) and (max-width: 925px){
+  .col-md-8{
+   width: 80%; 
+  }
+  #leftscreen{
+    padding-top: 150px;
+  }
+  #mainscreen{
+    padding-top: 150px;
+  }
+}

@@ -1,0 +1,36 @@
+/*-------------------Mainscreen--------------------------*/
+#mainscreen img {
+  max-width: 100%;
+  margin-top: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#mainscreenbutton {
+  background-color: rgb(249, 168, 37);
+  border: none;
+}
+#mainscreenbutton:focus{
+  background-color: #f96540;
+  box-shadow: none;
+}
+/*-------------------Responsive--------------------------*/
+@media only screen and (min-width: 275px) and (max-width: 420px) {
+  #mainscreen{
+    padding-top: 35%;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 540px) {
+  #mainscreen{
+    padding-top: 20%;
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 912px) {
+  #mainscreen{
+    padding-top: 30%;
+  }
+}
+@media only screen and (min-width: 1020px) and (max-width: 1290px) {
+  #mainscreen{
+    padding-top: 6%;
+  }
+}
